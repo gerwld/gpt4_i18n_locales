@@ -4,6 +4,7 @@ from colorist import ColorRGB
 
 PATH_TO_RESULT = './dist/locales/'
 PATH_TO_RESULT_CHUNKS= './dist/locales_chunks/'
+PATH_TO_RESULT_DESC= './dist/descriptions/'
 
 # чи фетчити без тегів
 FETCH_NO_TAGS = False

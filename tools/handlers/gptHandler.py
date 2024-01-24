@@ -41,6 +41,8 @@ class ChatGPTHandler:
         strip_first_3=False,
         strip_first_1=False
     ):
+        self.username = username,
+        self.password = password,
         self.gpt4 = gpt4
         self.should_start_with = should_start_with
         self.should_ends_with = should_ends_with
@@ -80,26 +82,33 @@ class ChatGPTHandler:
     def login(self, username: str, password: str):
         """To enter system"""
 
-        # Find login button, click it
-        login_button = self.sleepy_find_element(By.XPATH, self.login_xq)
-        login_button.click()
-        time.sleep(1)
+        try:
+            # Find login button, click it
+            login_button = self.sleepy_find_element(By.XPATH, self.login_xq)
+            login_button.click()
+            time.sleep(1)
 
-        # Find email textbox, enter e-mail
-        email_box = self.sleepy_find_element(By.ID, "username")
-        email_box.send_keys(username)
+            # Find email textbox, enter e-mail
+            email_box = self.sleepy_find_element(By.ID, "username")
+            email_box.send_keys(username)
 
-        # Click continue
-        continue_button = self.sleepy_find_element(By.XPATH, self.continue_xq)
-        continue_button.click()
-        time.sleep(1)
+            # Click continue
+            continue_button = self.sleepy_find_element(By.XPATH, self.continue_xq)
+            continue_button.click()
+            time.sleep(1)
 
-        # Find password textbox, enter password
-        pass_box = self.sleepy_find_element(By.ID, "password")
-        if type(pass_box) == list and len(pass_box):
-            pass_box[0].send_keys(password)
-        else:
-            pass_box.send_keys(password)
+            # Find password textbox, enter password
+            
+            pass_box = self.sleepy_find_element(By.ID, "password")
+            if type(pass_box) == list and len(pass_box):
+                pass_box[0].send_keys(password)
+            else:
+                pass_box.send_keys(password)
+        except:
+            self.browser.get("https://chat.openai.com/auth/login?next=/chat")
+            self.login(self.username, self.password)
+
+            print("{C_RED}Pass box was not found. Restart....{C_RED.OFF}")
         # Click continue
         continue_button = self.sleepy_find_element(By.XPATH, '/html/body/div[1]/main/section/div/div/div/form/div[3]/button')
         continue_button.click()
@@ -328,7 +337,10 @@ class ChatGPTHandler:
         try:
             self.browser.find_element(By.XPATH, self.reset_xq).click()
         except:
-            self.browser.find_element(By.XPATH, self.reset2_xq).click()
+            try:
+                self.browser.find_element(By.XPATH, self.reset2_xq).click()
+            except:
+                self.browser.get("https://chat.openai.com/auth/login?next=/chat")
 
 
     def check_limit_timeout(self, response: str):
@@ -340,6 +352,8 @@ class ChatGPTHandler:
                 f"{C_RED}ChatGPT-4 limit reached. Setting sleep to 1 hour...{C_RED.OFF}"
             )
             time.sleep(3600)
+            self.browser.get("https://chat.openai.com/")
+            self.reset_thread();
         if (
             "".join(response.strip().split(" ")).lower().startswith("!")
             and "reached our limit of messages per 24 hours." in response.strip()
@@ -347,17 +361,24 @@ class ChatGPTHandler:
             requests_delay = random.randint(2, 16)
             print(
                 f"{C_RED}ChatGPT 24h limit reached. Setting sleep to 1h {requests_delay} minutes...{C_RED.OFF}"
+
             )
             time.sleep(3600 + (requests_delay * 60))
+            self.browser.get("https://chat.openai.com/")
+            self.reset_thread();
         if (
             "".join(response.strip().split(" ")).lower().startswith("!")
             and "limit reached" in response.strip()
         ):
             requests_delay = random.randint(8, 20)
+            self.browser.get("https://chat.openai.com/")
+            self.reset_thread();
             print(
                 f"{C_RED}ChatGPT limit reached. Setting sleep to {requests_delay} minutes...{C_RED.OFF}"
             )
             time.sleep(requests_delay * 60)
+            self.browser.get("https://chat.openai.com/")
+            self.reset_thread();
         if (
             "".join(response.strip().split(" ")).lower().startswith("!")
             and "ne minute." in response.strip().lower()
@@ -366,9 +387,12 @@ class ChatGPTHandler:
             return ""
         if("You've reached our limit of messages per hour. Please try again later."  in response.strip()):
             print(
-                f"{C_RED}ChatGPT limit reached. Setting sleep to 30 min...{C_RED.OFF}"
+                f"{C_RED}ChatGPT limit reached. Setting sleep to 6 min...{C_RED.OFF}"
             )
-            time.sleep(1800)
+            time.sleep(360)
+            self.browser.get("https://chat.openai.com/")
+            self.reset_thread();
+
         if (
             "".join(response.strip().split(" ")).lower().startswith("!")
             and "Only one message at a time" in response.strip().lower()
