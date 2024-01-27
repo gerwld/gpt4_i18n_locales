@@ -2,10 +2,9 @@
 
 Translates i18n locales to any language supported by ChatGPT. This project is primarily aimed at developing a bot that utilizes GPT-4 "as it is", with automatization and without using OpenAI API, which is significantly more expensive than $25. Currently, it may not be "perfectly shaped", so if you want to make some improvements feel free to contribute. (However, please understand that I may not accept changes that are not beneficial).
 
-<img width="1280" alt="Pasted Graphic 1" src="https://github.com/gerwld/gpt4_locales/assets/47056812/7562d6ed-3ea4-445b-b64b-3775c923c95f">
 
+![photo_2024-01-27 05 35 26](https://github.com/gerwld/gpt4_i18n_locales/assets/47056812/59d8dfb2-4c0d-4509-8a61-a6ba92fabe65)
 
-<br>
 
 ## What currently works:
 - GPT3.5 / GPT 4, just set a prop. value to the GPT Handler
@@ -26,23 +25,26 @@ pip: -r requirements.txt
  
 ## Tools:
 
-### Translate JSON to lang selected it languages.txt (ln:mask):
+### Translate JSON to lang. specified in languages.txt:
 
 ```
 python -m tools.generate
 ```
  
-### Same as previous, but generates from chunks. More stable, but translation has less context:
+### Translate JSON, but separate it first on equal chunks:
 
 ```
 python -m tools.generate_chunks
 ```
 
-### generate_desc for description translate. isDescriptionValid for percise validation:
+### Translate description.txt. (for percise validation use isDescriptionValid):
 
 ```
 python -m tools.generate_desc
 ```
+
+## JSON Tools:
+
 
 ### utf16to8:
 
@@ -50,33 +52,21 @@ python -m tools.generate_desc
 python -m tools.utf16to8
 ```
 
-### get unused JSON keys in comparsion of 2 files:
+### get unused JSON keys (comparsion of 2 files):
 
 ```
 python -m tools.json.get_unused_i18n
 ```
 
-### combine JSON files into 1:
+### combine 2 JSON files into 1:
 
 ```
 python -m tools.json.combine
 ```
 
-### remove keys from all locales in dir:
+### remove [] keys from all locales in dir:
 
 ```
 python -m tools.json.remove_keys
-```
-
-
-
-<br>
-
-## To run improvers:
-
-### ChatGpt:
-
-```
-python -m improvers.chatGPT
 ```
 
