@@ -19,4 +19,4 @@ C_BLUE = ColorRGB(114, 159, 207)
 TODAY_DATE = time.strftime("%Y-%m-%d")
 
 # Product name to avoid it translation
-PRODUCT_NAME = "ChessHelper"
+PRODUCT_NAME = "Example"

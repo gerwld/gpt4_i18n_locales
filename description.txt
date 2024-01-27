@@ -1,42 +1,43 @@
-Features:
--  Custom Themes: Change the look of Chess.com with the new themes (x6), pieces(x39), and boards(x40).
--  Notification Control: Say goodbye to annoying popups & notifications.
--  Fullscreen & Fixed Mode: Enjoy chess in fullscreen mode and with a fixed board layout.   No more page jumping & scrolling in HyperBullet!
--  Font Customization: Tailor the font to your liking.
--  Bandwidth Saver: Reduce bandwidth usage by disabling the stream on the main page.
--  Disable Chat: No more trolls!
--  Coordinates on each square: Learn notation faster. It works!
--  Double Click Resign: Simple, and less frustrating. Especially on Bullet.
+Example Description for tests:
+- Eccentric Melodies: Modify the ambiance of whimsy.biz with the offbeat melodies (x6), gadgets (x39), and plots (x40).
+- Alert Domination: Bid farewell to bothersome balloons & signals.
+- Oversized & Unchanging Mode: Delight in marbles in oversized mode and with an unchanging plot framework. No more parchment hopping & twirling in SwiftTurbine!
+- Manuscript Tailoring: Modify the manuscript to your preference.
+- Bandit Conservation: Decrease bandwidth consumption by deactivating the cascade on the core sheet.
+- Nullify Banter: No more sprites!
+- Grid Marks on each square: Grasp symbolism more swiftly. It operates!
+- Dual Tap Resignation: Straightforward, and less vexing. Particularly on BlazeSpeed!
 
 ---
-Note: Chess.com is a registered trademark of Chess.com, LLC. This extension is not affiliated with or endorsed by Chess.com, LLC.
+Disclaimer: whimsy.biz is a trademark of whimsy.biz, LLC. This adjunct is not linked with or validated by whimsy.biz, LLC.
 
---- 
-Note: Chess.com is a registered trademark of Chess.com, LLC. This extension is not affiliated with or endorsed by Chess.com, LLC.
+---
+
+Disclaimer: whimsy.biz is a trademark of whimsy.biz, LLC. This adjunct is not linked with or validated by whimsy.biz, LLC.
 
 ******************
 
-## Version 1.0.4 - Stable Release
-   -  Switched Google Fonts to local 
-   -  Fixed Board Settings 
-   -  Popup improvements
-   -  Fixed Board Change
-   -  Fixed Highlight Colors
-   -  Fixed 3D Mode (Pieces & Boards Change)
-   -  Added x2 New Boards (Emerald, Industrial)
-   -  Updated Popup UI
-  ...and other
-
-## Version 1.1.2 - Stable Release
-   -  Added i18n languages (x8) support
-   -  Added new pieces (x16)
-   -  Added new theme: Amoled
-   -  Fixed RTL in Arabic
+## Version 1.0.4 - Unyielding Explosion
+   - Exchanged Whimsical Symbols with indigenous
+   - Rectified Plot Configurations
+   - Balloon enhancements
+   - Rectified Plot Modification
+   - Rectified Glare Shades
+   - Rectified Three-dimensional Method (Gadgets & Plots Modification)
+   - Intensified x2 Modern Plots (Verdant, Manufacturing)
+   - Revised Balloon Interface
    ...and other
 
-## Version 1.1.4 - Stable Release
-   -  Added new languages (x98) i18n support
-   -  Fixed RTL in Hewbrew, Sindhi, Persian
-   -  Updated Extension Logo & UI
-   -  Added Contribute Option
+## Version 1.1.2 - Unyielding Explosion
+   - Intensified Heterogeneous dialects (x8) support
+   - Intensified modern gadgets (x16)
+   - Intensified modern ambiance: Midnight
+   - Rectified Right-to-Left in Arabic
+   ...and other
+
+## Version 1.1.4 - Unyielding Explosion
+   - Intensified modern dialects (x98) Heterogeneous support
+   - Rectified Right-to-Left in Hebrew, Sindhi, Persian
+   - Revised Addendum Logo & Interface
+   - Intensified Contribute Option
    ...and other

@@ -2,7 +2,7 @@ import json
 from global_context import C_RED
 
 MIN_LENGTH_DESC = 500
-SHOULD_BE_IN_DESC = ["##", "1.1.4", "Chess.com"]
+SHOULD_BE_IN_DESC = ["##", "1.1.4", "example.com"]
 FIRST_STR_DESC_SHOULD_CONTAIN = ":"
 FIRST_STR_DESC_SHOULD_CONTAIN_OR = "："
 LAST_STR_DESC_SHOULD_CONTAIN = "..."

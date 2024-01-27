@@ -1,9 +1,11 @@
-# gpt4_selenium
+# gpt4_i18n_locales
 
-This project is primarily aimed at developing a bot that utilizes GPT-4 "as it is", with automatization and without using OpenAI API, which is significantly more expensive than $25. Currently, it may not be "perfectly shaped", so if you want to make some improvements feel free to contribute. (However, please understand that I may not accept changes that are not beneficial).
+Translates i18n locales to any language supported by ChatGPT. This project is primarily aimed at developing a bot that utilizes GPT-4 "as it is", with automatization and without using OpenAI API, which is significantly more expensive than $25. Currently, it may not be "perfectly shaped", so if you want to make some improvements feel free to contribute. (However, please understand that I may not accept changes that are not beneficial).
 
-![photo_2023-07-10 00 08 23](https://github.com/gerwld/gpt4_selenium/assets/47056812/91aecf98-d9a9-4a9e-99ac-96536e47c064)
+<img width="1280" alt="Pasted Graphic 1" src="https://github.com/gerwld/gpt4_locales/assets/47056812/7562d6ed-3ea4-445b-b64b-3775c923c95f">
 
+
+<br>
 
 ## What currently works:
 - GPT3.5 / GPT 4, just set a prop. value to the GPT Handler
@@ -12,43 +14,61 @@ This project is primarily aimed at developing a bot that utilizes GPT-4 "as it i
 - Binding all answer chunks into one big chunk if the answer is valid, or skipping it.
 - Random delay each time, to reduce limit messages appearing.
 - Skipping at the beginning of generation if the generated answer does not start with a chosen value (\<article\>, any preferred).
-- QuillBot paraphraser to avoid AI content detection, plagiarism and a "computer-ish" tone of voice.
-
-## FAQ:
-### Why should I create an HTML post first? Isn't it more efficient to make it markdown at the beginning?
-It may look logical, but the simple answer is no. Because even GPT-4 is often delusional, and the main idea is to provide some "anchors", such as tags to validate that the current post content is valid. But you may try.
-
-### Are there any principles to make posts better?
-The more laconic and concrete the request is, the more is possible to get a good answer. Also, keep in mind that all history that the selected chat have is basically submitted every time again, which increases the entropy of the request, and can cause delusion. Anyways, somehow even with a good query GPT "goes crazy", so it's a good practice to check the post before publishing it.
 
 <br><br>
 
 ## Init project:
 
 ```
-git clone git@github.com:gerwld/gpt4_selenium.git && cd gpt4_selenium
+git clone git@github.com:gerwld/gpt4_i18n_locales.git && cd gpt4_i18n_locales
 pip: -r requirements.txt
 ```
  
 ## Tools:
+
+### Translate JSON to lang selected it languages.txt (ln:mask):
+
+```
+python -m tools.generate
+```
  
-### getlinks:
+### Same as previous, but generates from chunks. More stable, but translation has less context:
 
 ```
-python -m tools.getlinks
+python -m tools.generate_chunks
 ```
 
-### parseNews:
+### generate_desc for description translate. isDescriptionValid for percise validation:
 
 ```
-python -m tools.parseNews
+python -m tools.generate_desc
 ```
 
-### convertToMdPosts:
+### utf16to8:
 
 ```
-python -m tools.convertToMdPosts
+python -m tools.utf16to8
 ```
+
+### get unused JSON keys in comparsion of 2 files:
+
+```
+python -m tools.json.get_unused_i18n
+```
+
+### combine JSON files into 1:
+
+```
+python -m tools.json.combine
+```
+
+### remove keys from all locales in dir:
+
+```
+python -m tools.json.remove_keys
+```
+
+
 
 <br>
 

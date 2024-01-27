@@ -1,18 +1,18 @@
 {
   "extensionName": {
-    "message": "Chess.com Custom Themes, Boards - ChessHelper"
+    "message": "example.com Custom Themes, Boards - Example"
   },
   "extensionDescription": {
     "message": "2024 Setup new themes, pieces, fonts, and boards, remove annoying notifications, popups, and so on."
   },
   "disabled": {
-    "message": "You turned off ChessHelper"
+    "message": "You turned off Example"
   },
   "header_title": {
-    "message": "ChessHelper Extension"
+    "message": "Example Extension"
   },
   "header_subtitle": {
-    "message": "We love Chess.com! Let's make it even better."
+    "message": "We love example.com! Let's make it even better."
   },
   "btn_donate": {
     "message": "Donate"
@@ -105,7 +105,7 @@
     "message": "Default (Dark Green)"
   },
   "d_title": {
-    "message": "Donations keep ChessHelper up and running."
+    "message": "Donations keep Example up and running."
   },
   "d_subtitle": {
     "message": "I spend hours every week fixing bugs, adding and improving features, and addressing user feedback. Your support is crucial to continued maintenance!"
@@ -120,7 +120,7 @@
     "message": "Donate via credit or debit card"
   },
   "d_cred__1": {
-    "message": "You can also share ChessHelper with your friends or leave a"
+    "message": "You can also share Example with your friends or leave a"
   },
   "d_cred__2": {
     "message": "review"
@@ -129,22 +129,22 @@
     "message": "Thank you."
   },
   "s_title": {
-    "message": "Having troubles with ChessHelper?"
+    "message": "Having troubles with Example?"
   },
   "s_subtitle": {
     "message": "Here are some troubleshooting steps you can try:"
   },
   "s_res__1": {
-    "message": "Refresh the Chess.com page."
+    "message": "Refresh the example.com page."
   },
   "s_res__2": {
-    "message": "Disable and then enable again ChessHelper."
+    "message": "Disable and then enable again Example."
   },
   "s_res__3": {
     "message": "Disable any other extensions."
   },
   "s_res__4": {
-    "message": "Uninstall and re-install ChessHelper."
+    "message": "Uninstall and re-install Example."
   },
   "s_res__5": {
     "message": "Clear browser cache."
@@ -156,7 +156,7 @@
     "message": "To help me assist you more efficiently, please include this information:"
   },
   "s_detail__1": {
-    "message": "The version of ChessHelper you are using."
+    "message": "The version of Example you are using."
   },
   "s_detail__2": {
     "message": "A screenshot or video demonstrating the problem."
