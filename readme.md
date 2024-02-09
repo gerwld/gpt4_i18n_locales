@@ -1,6 +1,6 @@
 # gpt4_i18n_locales
 
-Translates i18n locales to any language supported by ChatGPT. This project is primarily aimed at developing a bot that utilizes GPT-4 "as it is", with automatization and without using OpenAI API, which is significantly more expensive than $25. Currently, it may not be "perfectly shaped", so if you want to make some improvements feel free to contribute. (However, please understand that I may not accept changes that are not beneficial).
+A tool that translates i18n locales on any language supported by ChatGPT. This project is primarily aimed at developing a bot that utilizes GPT-4 "as it is", with automatization and without using OpenAI API, which is significantly more expensive than $25. Currently, it may not be "perfectly shaped", so if you want to make some improvements feel free to contribute. (However, please understand that I may not accept changes that are not beneficial).
 
 
 ![photo_2024-01-27 05 35 26](https://github.com/gerwld/gpt4_i18n_locales/assets/47056812/59d8dfb2-4c0d-4509-8a61-a6ba92fabe65)
